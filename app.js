@@ -1,4 +1,6 @@
 import express from "express";
+import questionRouter from "./Router/questions.js";
+import logging from "./Router/logging.js";
 
 async function init() {
   const app = express();
@@ -6,6 +8,8 @@ async function init() {
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
+  app.use(logging);
+  app.use("/questions", questionRouter);
 
   app.get("/", (req, res) => {
     return res.json("Hello Skill Checkpoint #2");

@@ -1,0 +1,4 @@
+
+IP: ::1, Method: GET,Endpoint: /questions/2
+IP: ::1, Method: GET,Endpoint: /questions
+IP: ::1, Method: DELETE,Endpoint: /questions/800
